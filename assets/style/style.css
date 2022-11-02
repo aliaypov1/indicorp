@@ -1,0 +1,228 @@
+@import url(./fonts.css);
+
+:root {
+  --darc-color:#252B42;
+  --disabled-color:#737373;
+  --primary-color:#00A0C1;
+  --warn-color:#FFA62B;
+  --light-color:#fff;
+}
+/* BASE CONFIG */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+}
+button{
+	background: none;
+	border: none;
+}
+ul {
+  margin-left: 0;
+  margin-right: 0;
+  
+}
+li {
+  list-style-type: none;
+}
+/* BASE CONFIG */
+/* HEADER SECTION */
+.header {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 36px;
+}
+.header__logo {
+  display: inline-block;
+  color: var(--darc-color);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  margin-right: 117px;
+}
+.header__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: var(--disabled-color);
+}
+.header__link:not(:last-child){
+  margin-right: 21px;
+}
+.header__burger {
+  display: none;
+  position: relative;
+  width: 25px;
+  height: 2px;
+  background-color: var(--darc-color);
+}
+.header__burger::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -7px;
+  background-color: var(--darc-color);
+}
+.header__burger::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: -7px;
+  background-color: var(--darc-color);
+}
+
+.header__burger:hover::before {
+  content: "";
+  transform: rotate(40deg);
+  bottom: 7px;
+  transition: 0.2s;
+}
+.header__burger:hover::after {
+  content: "";
+  transform: rotate(-40deg);
+  transform: 0.2s;
+  
+}
+.header__burger:hover{
+  transform: rotate(500deg);
+  transition: 6s;
+}
+
+
+.header__logo {
+  margin-right: 0;
+}
+.header .container {
+  justify-content: space-between;
+}
+
+/* HEADER SECTION */
+/* UNIQUE */
+.container {
+  max-width: 1050px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.d-flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.section__btn {
+  padding: 10px 35px;
+  border-radius: 37px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+}
+/* UNIQUE */
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 100vh;
+  padding-top: 184px;
+  background: url(../images/hero.jpg)#fff no-repeat center/cover;
+}
+.hero__title {
+  font-weight: 800;
+  font-size: 58px;
+  line-height: 80px;
+  letter-spacing: 0.2px;
+  color: var(--darc-color);
+  max-width: 509px;
+}
+.hero__desc {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  color: var(--disabled-color);
+  margin: 35px 0;
+  max-width: 378px;
+}
+.hero .hero__btn-filled {
+  margin-right: 10px;
+}
+.hero__btn-filled {
+  background: var(--warn-color);
+  color:var(--light-color);
+  border: 1px solid var(--warn-color);
+}
+.hero__btn-hollow {
+  color:var(--primary-color);
+  border: 1px solid var(--primary-color);
+  
+}
+/* HERO SECTION */
+/* FEATURES SECTION */
+.features {
+  padding: 211px 0 80px;
+}
+
+.card__title {
+  
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: var(--darc-color);
+  margin: 10px 0;
+  transition: .3s;
+
+}
+.card__text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color:var(--disabled-color);
+  transition: .3s;
+}
+.hero__cards {
+  max-width: 1050px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  bottom: -19px;
+}
+.hero__card {
+  padding: 39px 28px 35px 40px;
+  background: #FFFFFF;
+  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+  transition: .3s;
+
+}
+.hero__card svg {
+  fill: #00A0C1;
+  transition: .3s;
+}
+.hero__card:hover {
+  background: var(--primary-color);
+}
+.hero__card:hover svg {
+  fill: #fff;
+  
+}
+.hero__card:hover .card__title,
+.hero__card:hover .card__text{
+  color: var(--light-color);
+}
+/* FEATURES SECTION */
